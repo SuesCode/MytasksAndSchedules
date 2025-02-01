@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"            
+             x:Class="MytasksAndSchedules.Views.CustomControls.TaskView">
+    <Border Stroke="Gray" StrokeThickness="1" Padding="10">
+        <VerticalStackLayout>
+            <toolkit:Expander>
+                <toolkit:Expander.Header>
+                    <HorizontalStackLayout Spacing="10">
+                        <Label Text="{Binding TaskTitle}"
+                               FontSize="18"
+                               FontAttributes="Bold"
+                               VerticalOptions="Center"/>
+
+                        <!-- Toggle Button -->
+                        <Button Text="🔽"
+                                FontSize="16"
+                                BackgroundColor="Transparent"
+                                Command="{Binding DeleteCommand}"/>
+                    </HorizontalStackLayout>
+                </toolkit:Expander.Header>
+
+                <!-- Expander Content -->
+                <Label Text="{Binding TaskDetails}"
+                       FontSize="14"
+                       Margin="10"/>
+            </toolkit:Expander>
+        </VerticalStackLayout>
+    </Border>
+</ContentView>
