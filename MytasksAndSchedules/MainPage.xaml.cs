@@ -25,20 +25,23 @@ namespace MytasksAndSchedules
 
         private void OnAddTaskClicked(object sender, EventArgs e)
         {
-            if (!string.IsNullOrWhiteSpace(TaskEntry.Text))
+            if (!string.IsNullOrWhiteSpace(TaskEntry.Text) && !string.IsNullOrWhiteSpace(TaskDetails.Text))
             {
-                AddTask(TaskEntry.Text);
+                AddTask(TaskEntry.Text, TaskDetails.Text);
                 TaskEntry.Text = string.Empty;
+                TaskDetails.Text = string.Empty;
             }
         }
 
-        private void AddTask(string taskText)
+        private void AddTask(string taskTitle, string taskText)
         {
             TaskView taskView = null;
              taskView = new TaskView
             {
-                TaskTitle = taskText,
-                TaskDetails = "Task Details Here...",
+                TaskTitle = taskTitle,
+                TaskDetails = taskText,
+                IsExpanded = false,  
+                ExpandCommand = new Command(()=> ExpandTask(taskView)),
                 DeleteCommand = new Command(() => RemoveTask(taskView))
             };
 
@@ -48,6 +51,10 @@ namespace MytasksAndSchedules
         private void RemoveTask(TaskView taskView)
         {
             TaskList.Children.Remove(taskView);
+        }
+        private void ExpandTask(TaskView taskView)
+        {
+            taskView.IsExpanded = !taskView.IsExpanded;
         }
     }
 

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MytasksAndSchedules")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+ef8d9b68260601f155e8cc3ceef815ca42b7cec1")]
 [assembly: System.Reflection.AssemblyProductAttribute("MytasksAndSchedules")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MytasksAndSchedules")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
