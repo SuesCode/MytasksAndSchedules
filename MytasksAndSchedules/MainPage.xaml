@@ -5,7 +5,7 @@
              x:Class="MytasksAndSchedules.MainPage">
 
     <VerticalStackLayout Padding="20">
-        <!-- Task Entry & Add Button -->
+        <!-- Task Entry & Add Button✔ -->
         <HorizontalStackLayout>
             <Entry x:Name="TaskEntry" Placeholder="Enter a new task name" WidthRequest="150"/>
         </HorizontalStackLayout>
@@ -13,7 +13,7 @@
         <HorizontalStackLayout Spacing="10" HorizontalOptions="Start">
          
             <Entry x:Name="TaskDetails" Placeholder="Enter the task details" WidthRequest="250"/>
-            <Button Text="Add" Clicked="OnAddTaskClicked"/>
+            <Button Text="Add➕" Clicked="OnAddTaskClicked"/>
         </HorizontalStackLayout>
 
         <ScrollView>

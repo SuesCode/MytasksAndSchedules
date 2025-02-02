@@ -14,7 +14,7 @@
                                VerticalOptions="Center"/>
 
                         <!-- Toggle Button -->
-                        <Button Text="🔽"
+                        <Button Text="{Binding ToggleButtonText}"
                                 FontSize="16"
                                 BackgroundColor="Transparent"
                                 Command="{Binding ExpandCommand}"/>
@@ -24,6 +24,7 @@
                         Command="{Binding ToggleCommand}"
                         BackgroundColor="Transparent"
                         HorizontalOptions="End"/>
+                        
                         <Button Text="❌"
                          FontSize="16"
                          BackgroundColor="Transparent"
